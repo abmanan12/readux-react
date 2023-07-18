@@ -1,23 +1,19 @@
-import logo from './logo.svg';
-import './App.css';
+import './App.scss';
+
+import { Provider } from 'react-redux';
+import 'bootstrap/dist/js/bootstrap.bundle';
+
+import store from './pages/store';
+import Todos from './pages/Todos';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+
+      <Provider store={store}>
+        <Todos />
+      </Provider>
+
     </div>
   );
 }

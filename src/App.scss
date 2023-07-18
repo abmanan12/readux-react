@@ -1,0 +1,16 @@
+@import '../node_modules/bootstrap/scss/bootstrap.scss';
+
+
+.form-control:focus,
+.btn:focus {
+    box-shadow: none;
+}
+
+textarea {
+    resize: none;
+}
+
+
+.table-responsive::-webkit-scrollbar {
+    overflow: hidden;
+}
